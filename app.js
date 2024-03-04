@@ -5,6 +5,7 @@ const client = new Client({
   puppeteer: {
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   },
+  headelss: true,
 });
 
 client.on("qr", (qr) => {
