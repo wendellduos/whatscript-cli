@@ -3,7 +3,24 @@ const qrcode = require("qrcode-terminal");
 const { Client } = require("whatsapp-web.js");
 const client = new Client({
   puppeteer: {
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-extensions",
+      "--disable-component-extensions-with-background-pages",
+      "--disable-default-apps",
+      "--mute-audio",
+      "--no-default-browser-check",
+      "--autoplay-policy=user-gesture-required",
+      "--disable-background-timer-throttling",
+      "--disable-backgrounding-occluded-windows",
+      "--disable-notifications",
+      "--disable-background-networking",
+      "--disable-breakpad",
+      "--disable-component-update",
+      "--disable-domain-reliability",
+      "--disable-sync",
+    ],
   },
   headelss: true,
 });
